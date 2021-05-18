@@ -1,0 +1,21 @@
+{
+  "name": "TabsManager",
+  "description": "Manage all your chrome tabs easily!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs","<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["http://*.nytimes.com/*"],
+      "js": ["js/background.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "assets/tabsmanager32.png",
+      "48": "assets/tabsmanager48.png",
+      "128": "assets/tabsmanager128.png"
+    }
+  }
+}
